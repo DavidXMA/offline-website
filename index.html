@@ -17,123 +17,155 @@
 </head>
 <body>
 <div class="sky" aria-hidden="true"></div>
-<header class="top"><div class="wrap">
-  <a class="home" href="index.html" aria-label="Offline home"><h1 class="title">Offline</h1><div class="sub">For iPhone</div></a>
-  <div class="actions"><a class="ticket hide-s" href="privacy.html">Privacy</a><a class="ticket cut" href="support.html">Support</a></div>
-</div></header>
-<main class="wrap">
+<header class="nav-top"><div class="wrap"><div class="nav-pill">
+  <a class="nav-brand" href="index.html" aria-label="Offline home"><img src="img/moon.png" alt="">Offline</a>
+  <nav class="nav-links"><a href="index.html#how">How it works</a><a href="index.html#leagues">Leagues</a><a href="index.html#pillars">Pillars</a><a href="support.html">Support</a></nav>
+  <a class="nav-cta" href="index.html#download">Coming soon</a>
+</div></div></header>
+<main>
 
-<section class="card hero split" aria-label="Offline">
-  <div class="face">
-  <img class="moon" src="img/moon.png" alt="">
-  <div class="clock" id="clock">04:18:27</div>
-  <div class="clock-sub">Offline</div>
-  <div class="goalpill"><i></i>Best today 6 h 12 min</div>
-  </div>
-  <div>
-  <h2 class="say">Your apps stay locked. <b>Your time comes back.</b></h2>
+<section class="wrap v-hero">
+  <span class="chip-tag"><i class="live"></i>For iPhone · coming soon</span>
+  <h1>Your apps stay locked. <b>Your time comes back.</b></h1>
   <p class="body">Offline locks the apps that take your day. When you really need one, you take a short break. The time in between is your offline run.</p>
-  <div class="btns"><span class="btn" aria-disabled="true">Coming soon to the App Store</span><a class="btn grey" href="#how">How it works</a></div>
-  <p class="small">Free · iPhone · iOS 17.6 or later</p>
+  <div class="badges">
+    <span class="badge" aria-disabled="true"><img src="img/moon.png" alt=""><span><small>Coming soon on the</small><strong>App Store</strong></span></span>
+    <a class="badge ghost" href="#how"><span><small>See</small><strong>How it works</strong></span></a>
+  </div>
+  <p class="meta-line">Free · No ads · No tracking · iOS 17.6 or later</p>
+
+  <div class="shot" aria-hidden="true">
+    <div class="phone"><div class="app-screen">
+      <div class="island"></div><div class="sbar"><span>9:41</span><span>●●</span></div>
+      <div class="t">Offline</div><div class="s">● Live</div>
+      <div class="mini-card">
+        <img src="img/moon.png" alt="">
+        <div class="c" data-clock>04:18:27</div>
+        <div class="l">Offline</div>
+        <span class="goalpill"><i></i>Best today 6 h 12 min</span>
+      </div>
+      <div class="mini-row">
+        <div class="mini-card"><div class="k">Instagram</div><div class="v">locked</div></div>
+        <div class="mini-card"><div class="k">Breaks today</div><div class="v">2</div></div>
+      </div>
+      <div class="mini-tab"><span class="on"><img src="img/moon.png" alt="">Offline</span><span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 3h10v2h3v3a4 4 0 0 1-4 4h-.3A5 5 0 0 1 13 14.9V18h3v2H8v-2h3v-3.1A5 5 0 0 1 8.3 12H8a4 4 0 0 1-4-4V5h3V3Z"/></svg>Leagues</span></div>
+    </div></div>
   </div>
 </section>
 
-<div class="section-title" id="how"><h2 class="title">How it works</h2><div class="sub">Breaks, not limits</div></div>
-<div class="grid2 l">
-  <section class="card pad">
-    <p class="lab">Your day</p>
-    <h2 class="say" style="font-size:clamp(28px,3.4vw,40px)">Locked by default. <b>A break when you choose one.</b></h2>
-    <ol class="steps" style="margin-top:22px">
-      <li><span class="n">1</span><div><h3>Pick the apps that pull you in</h3><p>Instagram, TikTok, YouTube, whatever it is for you. Offline keeps them locked with Apple's Screen Time.</p></div></li>
-      <li><span class="n">2</span><div><h3>Take a break when you need one</h3><p>Tap the lock screen and the app opens for a set time. Each break of the day lasts a little longer.</p>
-        <div class="seg" aria-label="Break lengths"><span class="on">5 min</span><span>10 min</span><span>15 min</span></div></div></li>
-      <li><span class="n">3</span><div><h3>A new offline run begins</h3><p>When the break is over, the app locks again and the timer starts from zero.</p></div></li>
-      <li><span class="n">4</span><div><h3>Your best run counts</h3><p>The longest run of your day is your score, and it's what your friends see.</p></div></li>
-    </ol>
-  </section>
-  <section class="card pad fill" aria-label="Offline's lock screen">
-    <p class="lab">Lock screen</p>
-    <div class="phone-wrap" aria-hidden="true"><div class="phone"><div class="screen">
+<section class="wrap statement" aria-label="Why Offline">
+  <p data-reveal>You meant to check one thing. Then twenty minutes were gone. Offline puts a door in front of the apps that do this, and you decide when to open it.</p>
+</section>
+
+<section class="wrap feature" id="how">
+  <div>
+    <span class="chip-tag"><i></i>Lock screen</span>
+    <h2>Locked by default. <b>A break when you choose one.</b></h2>
+    <p class="body">Pick the apps that pull you in and Offline keeps them locked with Apple's Screen Time. When you need one, take a break. When it's over, the app locks again and a new offline run begins.</p>
+    <div class="seg" aria-label="Break lengths" style="margin-top:22px"><span class="on">5 min</span><span>then 10</span><span>then 15</span></div>
+  </div>
+  <div class="visual">
+    <div class="phone tilt-r" aria-hidden="true"><div class="screen">
       <div class="island"></div><div class="sbar"><span>9:41</span><span>●●</span></div>
       <img class="m" src="img/moon.png" alt="">
       <h4>You're offline right now</h4>
       <p>An offline break ends your current run. The app locks again after 5 minutes.</p>
       <div class="b"><span class="w">Stay offline</span><span class="g">5 min break</span></div>
-    </div></div></div>
-  </section>
-</div>
-
-<div class="section-title" id="leagues"><h2 class="title">Leagues</h2><div class="sub live">Live</div></div>
-<div class="grid2 r top-align">
-  <section class="card pad">
-    <p class="lab">With friends</p>
-    <h2 class="say" style="font-size:clamp(28px,3.4vw,40px)">Stay off your phone, <b>together.</b></h2>
-    <p class="body">Start a private league for one app and invite friends with a code. The board is live for everyone, and each day's result earns points.</p>
-    <ol class="steps" style="margin-top:18px">
-      <li><span class="n">✓</span><div><h3>Invite only</h3><p>No strangers and no public rankings.</p></div></li>
-      <li><span class="n">✓</span><div><h3>Scores, not habits</h3><p>Friends see your name, photo, score and rank. Never what you do inside other apps.</p></div></li>
-      <li><span class="n">✓</span><div><h3>Cheer them on</h3><p>Tap a friend's bar and put an emoji on it. It's gone after the day.</p></div></li>
-    </ol>
-    <div class="seg" style="margin-top:14px"><span class="on">Target Run</span><span>Target Average</span><span>Target Limit</span><span>Longest Run</span><span>Total Time</span></div>
-  </section>
-  <div><div class="stack"><div class="card lg"><div class="lg-head"><span class="lg-icon"><img src="img/moon.png" alt=""></span><div style="min-width:0"><div class="lg-name">No phone before 10</div><div class="lg-type">Target Run + Bonus</div></div><div class="lg-days"><b>5</b><span>days left</span></div></div><div class="lg-rows"><div class="rows"><div class="goal" style="left:calc(var(--lead) + (100% - var(--lead)) * 0.8939)" aria-hidden="true"><span>8h</span></div><div class="row"><span class="pts"><i class="ok"></i>+1</span><span class="av" style="background:#3a3f63">DV</span><div class="ticks"><b style="background:rgb(247,178,94)"></b><b style="background:rgb(246,170,91)"></b><b style="background:rgb(245,161,87)"></b><b style="background:rgb(244,153,84)"></b><b style="background:rgb(243,145,80)"></b><b style="background:rgb(242,137,77)"></b><b style="background:rgb(241,128,73)"></b><b style="background:rgb(240,120,70)"></b><b style="background:rgb(239,112,66)"></b><b style="background:rgb(237,104,65)"></b><b style="background:rgb(235,96,69)"></b><b style="background:rgb(233,89,73)"></b><b style="background:rgb(231,81,77)"></b><b style="background:rgb(229,74,81)"></b><b style="background:rgb(226,67,84)"></b><b style="background:rgb(224,59,88)"></b><b style="background:rgb(222,52,92)"></b><b style="background:rgb(217,52,99)"></b><b style="background:rgb(213,51,106)"></b><b style="background:rgb(209,51,112)"></b><b style="background:rgb(204,51,119)"></b><b style="background:rgb(200,51,125)"></b><b style="background:rgb(195,50,132)"></b><b style="background:rgb(191,50,139)"></b><b style="background:rgb(182,53,151)"></b><b style="background:rgb(171,56,165)"></b><b style="background:rgb(161,60,179)"></b><b style="background:rgb(151,63,192)"></b><b style="background:rgb(140,67,206)"></b><b></b><span class="val" style="left:calc(96.67% - 4px)">8h 40m</span></div></div><div class="row"><span class="pts"><i class="ok"></i>+1</span><span class="av" style="background:#6b3f5e">SA</span><div class="ticks"><b style="background:rgb(247,178,94)"></b><b style="background:rgb(246,170,91)"></b><b style="background:rgb(245,161,87)"></b><b style="background:rgb(244,153,84)"></b><b style="background:rgb(243,145,80)"></b><b style="background:rgb(242,137,77)"></b><b style="background:rgb(241,128,73)"></b><b style="background:rgb(240,120,70)"></b><b style="background:rgb(239,112,66)"></b><b style="background:rgb(237,104,65)"></b><b style="background:rgb(235,96,69)"></b><b style="background:rgb(233,89,73)"></b><b style="background:rgb(231,81,77)"></b><b style="background:rgb(229,74,81)"></b><b style="background:rgb(226,67,84)"></b><b style="background:rgb(224,59,88)"></b><b style="background:rgb(222,52,92)"></b><b style="background:rgb(217,52,99)"></b><b style="background:rgb(213,51,106)"></b><b style="background:rgb(209,51,112)"></b><b style="background:rgb(204,51,119)"></b><b style="background:rgb(200,51,125)"></b><b style="background:rgb(195,50,132)"></b><b style="background:rgb(191,50,139)"></b><b style="background:rgb(182,53,151)"></b><b style="background:rgb(171,56,165)"></b><b style="background:rgb(161,60,179)"></b><b style="background:rgb(151,63,192)"></b><b style="background:rgb(140,67,206)"></b><b></b><span class="val" style="left:calc(96.67% - 4px)">8h 40m</span><span class="em" style="left:67.0%" aria-hidden="true">🔥</span></div></div><div class="row"><span class="pts"><i></i>+0</span><span class="av" style="background:#2f5560">LE</span><div class="ticks"><b style="background:rgb(247,178,94)"></b><b style="background:rgb(246,170,91)"></b><b style="background:rgb(245,161,87)"></b><b style="background:rgb(244,153,84)"></b><b style="background:rgb(243,145,80)"></b><b style="background:rgb(242,137,77)"></b><b style="background:rgb(241,128,73)"></b><b style="background:rgb(240,120,70)"></b><b style="background:rgb(239,112,66)"></b><b style="background:rgb(237,104,65)"></b><b style="background:rgb(235,96,69)"></b><b style="background:rgb(233,89,73)"></b><b style="background:rgb(231,81,77)"></b><b style="background:rgb(229,74,81)"></b><b style="background:rgb(226,67,84)"></b><b style="background:rgb(224,59,88)"></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><span class="val" style="left:calc(53.33% - 4px)">4h 40m</span><span class="em" style="left:33.5%" aria-hidden="true">👏</span></div></div></div></div></div><div class="card lg"><div class="lg-head"><span class="lg-icon"><img src="img/moon.png" alt=""></span><div style="min-width:0"><div class="lg-name">Weekend Offline</div><div class="lg-type">Target Run</div></div><div class="lg-days"><b>2</b><span>days left</span></div></div><div class="lg-rows"><div class="rows"><div class="goal" style="left:calc(var(--lead) + (100% - var(--lead)) * 0.8929)" aria-hidden="true"><span>10h</span></div><div class="row"><span class="pts"><i class="ok"></i>+1</span><span class="av" style="background:#5a4a2e">MI</span><div class="ticks"><b style="background:rgb(247,178,94)"></b><b style="background:rgb(246,170,91)"></b><b style="background:rgb(245,161,87)"></b><b style="background:rgb(244,153,84)"></b><b style="background:rgb(243,145,80)"></b><b style="background:rgb(242,137,77)"></b><b style="background:rgb(241,128,73)"></b><b style="background:rgb(240,120,70)"></b><b style="background:rgb(239,112,66)"></b><b style="background:rgb(237,104,65)"></b><b style="background:rgb(235,96,69)"></b><b style="background:rgb(233,89,73)"></b><b style="background:rgb(231,81,77)"></b><b style="background:rgb(229,74,81)"></b><b style="background:rgb(226,67,84)"></b><b style="background:rgb(224,59,88)"></b><b style="background:rgb(222,52,92)"></b><b style="background:rgb(217,52,99)"></b><b style="background:rgb(213,51,106)"></b><b style="background:rgb(209,51,112)"></b><b style="background:rgb(204,51,119)"></b><b style="background:rgb(200,51,125)"></b><b style="background:rgb(195,50,132)"></b><b style="background:rgb(191,50,139)"></b><b style="background:rgb(182,53,151)"></b><b style="background:rgb(171,56,165)"></b><b style="background:rgb(161,60,179)"></b><b style="background:rgb(151,63,192)"></b><b style="background:rgb(140,67,206)"></b><b style="background:rgb(130,70,220)"></b><span class="val" style="left:calc(100.00% - 4px)">11h 5m</span></div></div><div class="row"><span class="pts"><i></i>+0</span><span class="av" style="background:#3a3f63">DV</span><div class="ticks"><b style="background:rgb(247,178,94)"></b><b style="background:rgb(246,170,91)"></b><b style="background:rgb(245,161,87)"></b><b style="background:rgb(244,153,84)"></b><b style="background:rgb(243,145,80)"></b><b style="background:rgb(242,137,77)"></b><b style="background:rgb(241,128,73)"></b><b style="background:rgb(240,120,70)"></b><b style="background:rgb(239,112,66)"></b><b style="background:rgb(237,104,65)"></b><b style="background:rgb(235,96,69)"></b><b style="background:rgb(233,89,73)"></b><b style="background:rgb(231,81,77)"></b><b style="background:rgb(229,74,81)"></b><b style="background:rgb(226,67,84)"></b><b style="background:rgb(224,59,88)"></b><b style="background:rgb(222,52,92)"></b><b style="background:rgb(217,52,99)"></b><b style="background:rgb(213,51,106)"></b><b style="background:rgb(209,51,112)"></b><b style="background:rgb(204,51,119)"></b><b style="background:rgb(200,51,125)"></b><b style="background:rgb(195,50,132)"></b><b style="background:rgb(191,50,139)"></b><b style="background:rgb(182,53,151)"></b><b></b><b></b><b></b><b></b><b></b><span class="val" style="left:calc(83.33% - 4px)">9h 20m</span><span class="em" style="left:62.5%" aria-hidden="true">🙌</span></div></div></div></div></div><div class="card lg"><div class="lg-head"><span class="lg-icon"><img src="img/moon.png" alt=""></span><div style="min-width:0"><div class="lg-name">Sunday reset</div><div class="lg-type">Target Average</div></div><div class="lg-days"><b>6</b><span>days left</span></div></div></div></div></div>
-</div>
-
-<div class="section-title"><h2 class="title">Your day</h2><div class="sub">Three rings</div></div>
-<div class="grid2 l">
-  <section class="card pad">
-    <p class="lab">Today</p>
-    <div class="rings">
-      <svg viewBox="0 0 200 200" role="img" aria-label="Three rings: run 72 percent, average 94 percent, limit closed"><defs><linearGradient id="r1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7b25e"/><stop offset="1" stop-color="#ee6a40"/></linearGradient></defs><circle cx="100" cy="100" r="88" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="16"/><path d="M100 12 A88 88 0 1 1 12.17 94.47" fill="none" stroke="url(#r1)" stroke-width="16" stroke-linecap="round"/><defs><linearGradient id="r2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ee6a6a"/><stop offset="1" stop-color="#d63a8c"/></linearGradient></defs><circle cx="100" cy="100" r="66" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="16"/><path d="M100 34 A66 66 0 1 1 75.70 38.63" fill="none" stroke="url(#r2)" stroke-width="16" stroke-linecap="round"/><defs><linearGradient id="r3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#be4fd0"/><stop offset="1" stop-color="#8246dc"/></linearGradient></defs><circle cx="100" cy="100" r="44" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="16"/><path d="M100 56 A44 44 0 1 1 99.72 56.00" fill="none" stroke="url(#r3)" stroke-width="16" stroke-linecap="round"/></svg>
-      <div class="ring-list">
-        <div><div class="k"><i style="background:#f08a4b"></i>Offline Run</div><div class="v">7 h 36 min</div><span class="goalpill">Goal 10 h</span></div>
-        <div><div class="k"><i style="background:#e0447a"></i>Offline Average</div><div class="v">7.6 h</div><span class="goalpill">Goal 8 h</span></div>
-        <div><div class="k"><i style="background:#9a52dc"></i>Online Limit</div><div class="v">0 min</div><span class="goalpill">Goal 1 h 30 min</span></div>
-      </div>
-    </div>
-    <p class="small" style="margin-top:22px">Your day is judged when it ends at 5 AM. No need to check in.</p>
-  </section>
-  <div class="stack">
-    <section class="card pad">
-      <p class="lab">This week</p>
-      <div class="week"><div><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="wM1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7b25e"/><stop offset="1" stop-color="#d63a8c"/></linearGradient></defs><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="6"/><path d="M20 5 A15 15 0 1 1 19.91 5.00" fill="none" stroke="url(#wM1)" stroke-width="6" stroke-linecap="round"/></svg><span>M</span></div><div><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="wT0.8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7b25e"/><stop offset="1" stop-color="#d63a8c"/></linearGradient></defs><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="6"/><path d="M20 5 A15 15 0 1 1 5.73 15.36" fill="none" stroke="url(#wT0.8)" stroke-width="6" stroke-linecap="round"/></svg><span>T</span></div><div><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="wW0.95" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7b25e"/><stop offset="1" stop-color="#d63a8c"/></linearGradient></defs><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="6"/><path d="M20 5 A15 15 0 1 1 15.36 5.73" fill="none" stroke="url(#wW0.95)" stroke-width="6" stroke-linecap="round"/></svg><span>W</span></div><div><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="wT0.4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7b25e"/><stop offset="1" stop-color="#d63a8c"/></linearGradient></defs><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="6"/><path d="M20 5 A15 15 0 0 1 28.82 32.14" fill="none" stroke="url(#wT0.4)" stroke-width="6" stroke-linecap="round"/></svg><span>T</span></div><div><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="6"/></svg><span>F</span></div><div><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="6"/></svg><span>S</span></div><div><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="6"/></svg><span>S</span></div></div>
-    </section>
-    <section class="card pad">
-      <p class="lab">Status</p>
-      <div class="status-big">1,287</div><div class="status-cap">Offline hours</div>
-      <div class="status-row"><b>Counted across all your apps</b><span>Kept forever</span></div>
-      <div class="bar"><i></i></div>
-      <p class="small">What your status unlocks, you'll find out on the way.</p>
-    </section>
-  </div>
-</div>
-
-<div class="section-title"><h2 class="title">Privacy</h2><div class="sub">Built to be left alone</div></div>
-<section class="card pad">
-  <div class="plist">
-    <div><h3>Screen Time stays on your iPhone</h3><p>Used only to lock and unlock apps. Usage reports and app identifiers never leave your phone.</p></div>
-    <div><h3>No ads, no tracking</h3><p>No analytics or advertising tools in the app. Your data is never sold.</p></div>
-    <div><h3>Leagues share scores only</h3><p>Friends see your score and rank, never your break history.</p></div>
-    <div><h3>Leave anytime</h3><p>Leave a league or delete your account in the app. <a href="privacy.html">Privacy Policy</a></p></div>
+    </div></div>
   </div>
 </section>
 
-<section class="card hero narrow-card" id="download" style="margin-top:26px">
-  <img class="moon" src="img/moon.png" alt="">
-  <h2 class="say" style="margin-top:6px">Put the phone down. <b>Start a run.</b></h2>
-  <div class="btns"><span class="btn" aria-disabled="true">Coming soon to the App Store</span><a class="btn grey" href="support.html">Support</a></div>
+<section class="wrap feature flip" id="leagues">
+  <div>
+    <span class="chip-tag"><i class="live"></i>Leagues</span>
+    <h2>Stay off your phone, <b>together.</b></h2>
+    <p class="body">Start a private league for one app and invite friends with a code. Everyone sees the board live, each day's result earns points, and you can put an emoji on a friend's bar to cheer them on.</p>
+    <div class="seg" style="margin-top:22px"><span class="on">Target Run</span><span>Target Average</span><span>Target Limit</span><span>Longest Run</span><span>Total Time</span></div>
+  </div>
+  <div class="visual tilt-l"><div class="stack"><div class="card lg"><div class="lg-head"><span class="lg-icon"><img src="img/moon.png" alt=""></span><div style="min-width:0"><div class="lg-name">No phone before 10</div><div class="lg-type">Target Run + Bonus</div></div><div class="lg-days"><b>5</b><span>days left</span></div></div><div class="lg-rows"><div class="rows"><div class="goal" style="left:calc(var(--lead) + (100% - var(--lead)) * 0.8939)" aria-hidden="true"><span>8h</span></div><div class="row"><span class="pts"><i class="ok"></i>+1</span><span class="av" style="background:#3a3f63">DV</span><div class="ticks"><b style="background:rgb(247,178,94)"></b><b style="background:rgb(246,170,91)"></b><b style="background:rgb(245,161,87)"></b><b style="background:rgb(244,153,84)"></b><b style="background:rgb(243,145,80)"></b><b style="background:rgb(242,137,77)"></b><b style="background:rgb(241,128,73)"></b><b style="background:rgb(240,120,70)"></b><b style="background:rgb(239,112,66)"></b><b style="background:rgb(237,104,65)"></b><b style="background:rgb(235,96,69)"></b><b style="background:rgb(233,89,73)"></b><b style="background:rgb(231,81,77)"></b><b style="background:rgb(229,74,81)"></b><b style="background:rgb(226,67,84)"></b><b style="background:rgb(224,59,88)"></b><b style="background:rgb(222,52,92)"></b><b style="background:rgb(217,52,99)"></b><b style="background:rgb(213,51,106)"></b><b style="background:rgb(209,51,112)"></b><b style="background:rgb(204,51,119)"></b><b style="background:rgb(200,51,125)"></b><b style="background:rgb(195,50,132)"></b><b style="background:rgb(191,50,139)"></b><b style="background:rgb(182,53,151)"></b><b style="background:rgb(171,56,165)"></b><b style="background:rgb(161,60,179)"></b><b style="background:rgb(151,63,192)"></b><b style="background:rgb(140,67,206)"></b><b></b><span class="val" style="left:calc(96.67% - 4px)">8h 40m</span></div></div><div class="row"><span class="pts"><i class="ok"></i>+1</span><span class="av" style="background:#6b3f5e">SA</span><div class="ticks"><b style="background:rgb(247,178,94)"></b><b style="background:rgb(246,170,91)"></b><b style="background:rgb(245,161,87)"></b><b style="background:rgb(244,153,84)"></b><b style="background:rgb(243,145,80)"></b><b style="background:rgb(242,137,77)"></b><b style="background:rgb(241,128,73)"></b><b style="background:rgb(240,120,70)"></b><b style="background:rgb(239,112,66)"></b><b style="background:rgb(237,104,65)"></b><b style="background:rgb(235,96,69)"></b><b style="background:rgb(233,89,73)"></b><b style="background:rgb(231,81,77)"></b><b style="background:rgb(229,74,81)"></b><b style="background:rgb(226,67,84)"></b><b style="background:rgb(224,59,88)"></b><b style="background:rgb(222,52,92)"></b><b style="background:rgb(217,52,99)"></b><b style="background:rgb(213,51,106)"></b><b style="background:rgb(209,51,112)"></b><b style="background:rgb(204,51,119)"></b><b style="background:rgb(200,51,125)"></b><b style="background:rgb(195,50,132)"></b><b style="background:rgb(191,50,139)"></b><b style="background:rgb(182,53,151)"></b><b style="background:rgb(171,56,165)"></b><b style="background:rgb(161,60,179)"></b><b style="background:rgb(151,63,192)"></b><b style="background:rgb(140,67,206)"></b><b></b><span class="val" style="left:calc(96.67% - 4px)">8h 40m</span><span class="em" style="left:67.0%" aria-hidden="true">🔥</span></div></div><div class="row"><span class="pts"><i></i>+0</span><span class="av" style="background:#2f5560">LE</span><div class="ticks"><b style="background:rgb(247,178,94)"></b><b style="background:rgb(246,170,91)"></b><b style="background:rgb(245,161,87)"></b><b style="background:rgb(244,153,84)"></b><b style="background:rgb(243,145,80)"></b><b style="background:rgb(242,137,77)"></b><b style="background:rgb(241,128,73)"></b><b style="background:rgb(240,120,70)"></b><b style="background:rgb(239,112,66)"></b><b style="background:rgb(237,104,65)"></b><b style="background:rgb(235,96,69)"></b><b style="background:rgb(233,89,73)"></b><b style="background:rgb(231,81,77)"></b><b style="background:rgb(229,74,81)"></b><b style="background:rgb(226,67,84)"></b><b style="background:rgb(224,59,88)"></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><span class="val" style="left:calc(53.33% - 4px)">4h 40m</span><span class="em" style="left:33.5%" aria-hidden="true">👏</span></div></div></div></div></div><div class="card lg"><div class="lg-head"><span class="lg-icon"><img src="img/moon.png" alt=""></span><div style="min-width:0"><div class="lg-name">Weekend Offline</div><div class="lg-type">Target Run</div></div><div class="lg-days"><b>2</b><span>days left</span></div></div><div class="lg-rows"><div class="rows"><div class="goal" style="left:calc(var(--lead) + (100% - var(--lead)) * 0.8929)" aria-hidden="true"><span>10h</span></div><div class="row"><span class="pts"><i class="ok"></i>+1</span><span class="av" style="background:#5a4a2e">MI</span><div class="ticks"><b style="background:rgb(247,178,94)"></b><b style="background:rgb(246,170,91)"></b><b style="background:rgb(245,161,87)"></b><b style="background:rgb(244,153,84)"></b><b style="background:rgb(243,145,80)"></b><b style="background:rgb(242,137,77)"></b><b style="background:rgb(241,128,73)"></b><b style="background:rgb(240,120,70)"></b><b style="background:rgb(239,112,66)"></b><b style="background:rgb(237,104,65)"></b><b style="background:rgb(235,96,69)"></b><b style="background:rgb(233,89,73)"></b><b style="background:rgb(231,81,77)"></b><b style="background:rgb(229,74,81)"></b><b style="background:rgb(226,67,84)"></b><b style="background:rgb(224,59,88)"></b><b style="background:rgb(222,52,92)"></b><b style="background:rgb(217,52,99)"></b><b style="background:rgb(213,51,106)"></b><b style="background:rgb(209,51,112)"></b><b style="background:rgb(204,51,119)"></b><b style="background:rgb(200,51,125)"></b><b style="background:rgb(195,50,132)"></b><b style="background:rgb(191,50,139)"></b><b style="background:rgb(182,53,151)"></b><b style="background:rgb(171,56,165)"></b><b style="background:rgb(161,60,179)"></b><b style="background:rgb(151,63,192)"></b><b style="background:rgb(140,67,206)"></b><b style="background:rgb(130,70,220)"></b><span class="val" style="left:calc(100.00% - 4px)">11h 5m</span></div></div><div class="row"><span class="pts"><i></i>+0</span><span class="av" style="background:#3a3f63">DV</span><div class="ticks"><b style="background:rgb(247,178,94)"></b><b style="background:rgb(246,170,91)"></b><b style="background:rgb(245,161,87)"></b><b style="background:rgb(244,153,84)"></b><b style="background:rgb(243,145,80)"></b><b style="background:rgb(242,137,77)"></b><b style="background:rgb(241,128,73)"></b><b style="background:rgb(240,120,70)"></b><b style="background:rgb(239,112,66)"></b><b style="background:rgb(237,104,65)"></b><b style="background:rgb(235,96,69)"></b><b style="background:rgb(233,89,73)"></b><b style="background:rgb(231,81,77)"></b><b style="background:rgb(229,74,81)"></b><b style="background:rgb(226,67,84)"></b><b style="background:rgb(224,59,88)"></b><b style="background:rgb(222,52,92)"></b><b style="background:rgb(217,52,99)"></b><b style="background:rgb(213,51,106)"></b><b style="background:rgb(209,51,112)"></b><b style="background:rgb(204,51,119)"></b><b style="background:rgb(200,51,125)"></b><b style="background:rgb(195,50,132)"></b><b style="background:rgb(191,50,139)"></b><b style="background:rgb(182,53,151)"></b><b></b><b></b><b></b><b></b><b></b><span class="val" style="left:calc(83.33% - 4px)">9h 20m</span><span class="em" style="left:62.5%" aria-hidden="true">🙌</span></div></div></div></div></div><div class="card lg"><div class="lg-head"><span class="lg-icon"><img src="img/moon.png" alt=""></span><div style="min-width:0"><div class="lg-name">Sunday reset</div><div class="lg-type">Target Average</div></div><div class="lg-days"><b>6</b><span>days left</span></div></div></div></div></div>
+</section>
+
+<section class="wrap feature" id="pillars">
+  <div>
+    <span class="chip-tag"><i></i>My Pillars</span>
+    <h2>Three rings <b>for your day.</b></h2>
+    <p class="body">Your longest run, your average and your time online, each against a goal you set. Your day is judged when it ends at 5 AM, so there's nothing to check in.</p>
+  </div>
+  <div class="visual">
+    <section class="card pad tilt-r" aria-label="Today">
+      <p class="lab">Today</p>
+      <div class="rings">
+        <svg viewBox="0 0 200 200" role="img" aria-label="Three rings: run 72 percent, average 94 percent, limit closed"><defs><linearGradient id="r1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7b25e"/><stop offset="1" stop-color="#ee6a40"/></linearGradient></defs><circle cx="100" cy="100" r="88" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="16"/><path d="M100 12 A88 88 0 1 1 12.17 94.47" fill="none" stroke="url(#r1)" stroke-width="16" stroke-linecap="round"/><defs><linearGradient id="r2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ee6a6a"/><stop offset="1" stop-color="#d63a8c"/></linearGradient></defs><circle cx="100" cy="100" r="66" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="16"/><path d="M100 34 A66 66 0 1 1 75.70 38.63" fill="none" stroke="url(#r2)" stroke-width="16" stroke-linecap="round"/><defs><linearGradient id="r3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#be4fd0"/><stop offset="1" stop-color="#8246dc"/></linearGradient></defs><circle cx="100" cy="100" r="44" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="16"/><path d="M100 56 A44 44 0 1 1 99.72 56.00" fill="none" stroke="url(#r3)" stroke-width="16" stroke-linecap="round"/></svg>
+        <div class="ring-list">
+          <div><div class="k"><i style="background:#f08a4b"></i>Offline Run</div><div class="v">7 h 36 min</div><span class="goalpill">Goal 10 h</span></div>
+          <div><div class="k"><i style="background:#e0447a"></i>Offline Average</div><div class="v">7.6 h</div><span class="goalpill">Goal 8 h</span></div>
+          <div><div class="k"><i style="background:#9a52dc"></i>Online Limit</div><div class="v">0 min</div><span class="goalpill">Goal 1 h 30 min</span></div>
+        </div>
+      </div>
+      <p class="lab" style="margin-top:26px">This week</p>
+      <div class="week"><div><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="wM1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7b25e"/><stop offset="1" stop-color="#d63a8c"/></linearGradient></defs><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="6"/><path d="M20 5 A15 15 0 1 1 19.91 5.00" fill="none" stroke="url(#wM1)" stroke-width="6" stroke-linecap="round"/></svg><span>M</span></div><div><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="wT0.8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7b25e"/><stop offset="1" stop-color="#d63a8c"/></linearGradient></defs><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="6"/><path d="M20 5 A15 15 0 1 1 5.73 15.36" fill="none" stroke="url(#wT0.8)" stroke-width="6" stroke-linecap="round"/></svg><span>T</span></div><div><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="wW0.95" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7b25e"/><stop offset="1" stop-color="#d63a8c"/></linearGradient></defs><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="6"/><path d="M20 5 A15 15 0 1 1 15.36 5.73" fill="none" stroke="url(#wW0.95)" stroke-width="6" stroke-linecap="round"/></svg><span>W</span></div><div><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="wT0.4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7b25e"/><stop offset="1" stop-color="#d63a8c"/></linearGradient></defs><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="6"/><path d="M20 5 A15 15 0 0 1 28.82 32.14" fill="none" stroke="url(#wT0.4)" stroke-width="6" stroke-linecap="round"/></svg><span>T</span></div><div><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="6"/></svg><span>F</span></div><div><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="6"/></svg><span>S</span></div><div><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="6"/></svg><span>S</span></div></div>
+    </section>
+  </div>
+</section>
+
+<section class="wrap figure" aria-label="Status">
+  <span class="chip-tag"><i></i>Status</span>
+  <h2 style="margin-top:22px">Every hour away adds up.</h2>
+  <div class="metal">1,287</div>
+  <p class="under">offline hours, counted across all your apps and kept forever</p>
+  <div class="stats">
+    <div><b>5 · 10 · 15</b><span>Minute breaks</span><p>Each break of the day lasts a little longer.</p></div>
+    <div><b>0</b><span>Ads or trackers</span><p>No analytics or advertising tools, and your data is never sold.</p></div>
+    <div><b>Free</b><span>No subscription</span><p>Offline costs nothing.</p></div>
+  </div>
+</section>
+
+<section class="wrap faq-mini">
+  <h2>Questions</h2>
+  <details><summary>What does Offline see?</summary><p>Offline uses Screen Time only to lock and unlock the apps you choose. Usage reports and app identifiers never leave your iPhone. <a href="privacy.html">Privacy Policy</a></p></details>
+  <details><summary>What do my friends see in a league?</summary><p>Your name, photo, daily score, points and rank. Never your break history or what you do inside other apps.</p></details>
+  <details><summary>Can I leave or delete my account?</summary><p>Anytime, in the app: leave a league, or Settings → Delete account.</p></details>
+  <details><summary>Something else?</summary><p>Write to us at mail@xmachina.com, or read the <a href="support.html">Support page</a>.</p></details>
+</section>
+
+<section class="wrap">
+  <div class="card final">
+    <img src="img/moon.png" alt="" style="width:84px;margin:0 auto;filter:drop-shadow(0 0 22px rgba(255,255,255,.35))">
+    <h2>Put the phone down. <b>Start a run.</b></h2>
+    <div class="badges"><span class="badge" aria-disabled="true"><img src="img/moon.png" alt=""><span><small>Coming soon on the</small><strong>App Store</strong></span></span></div>
+  </div>
 </section>
 
 </main>
 
+<div class="live-chip" aria-label="An offline run, counting up"><img src="img/moon.png" alt=""><b data-clock>04:18:27</b> offline right now</div>
+
 <script>
 (function () {
   function pad(n) { return (n < 10 ? '0' : '') + n; }
-  var el = document.getElementById('clock'), start = Date.now(), base = 4 * 3600 + 18 * 60 + 27;
-  if (el) setInterval(function () {
+  var clocks = document.querySelectorAll('[data-clock]'), start = Date.now(), base = 4 * 3600 + 18 * 60 + 27;
+  setInterval(function () {
     var s = base + Math.floor((Date.now() - start) / 1000);
-    el.textContent = pad(Math.floor(s / 3600)) + ':' + pad(Math.floor(s / 60) % 60) + ':' + pad(s % 60);
+    var t = pad(Math.floor(s / 3600)) + ':' + pad(Math.floor(s / 60) % 60) + ':' + pad(s % 60);
+    clocks.forEach(function (c) { c.textContent = t; });
   }, 1000);
+
+  // The statement lights up word by word as it scrolls through the screen.
+  var p = document.querySelector('[data-reveal]');
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (p && !reduce) {
+    var words = p.textContent.trim().split(/\s+/);
+    p.innerHTML = words.map(function (w) { return '<span class="w">' + w + '</span>'; }).join(' ');
+    var spans = p.querySelectorAll('.w');
+    function update() {
+      var r = p.getBoundingClientRect(), vh = innerHeight;
+      var prog = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.35)));
+      var lit = prog * spans.length;
+      spans.forEach(function (s, i) { s.style.setProperty('--o', i < lit ? 1 : 0.22); });
+    }
+    addEventListener('scroll', update, { passive: true }); addEventListener('resize', update); update();
+  }
+
   var map = { '#privacy': 'privacy.html', '#terms': 'terms.html', '#faq': 'support.html', '#contact': 'support.html' };
   if (map[location.hash]) location.replace(map[location.hash]);
 })();
