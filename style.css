@@ -377,3 +377,40 @@ details p { margin: 10px 0 0; color: var(--fg-2); }
 .final h2 { font-weight: 200; font-size: clamp(44px, 7vw, 96px); letter-spacing: -.035em; line-height: .98; margin: 34px auto 0; max-width: 10em; text-wrap: balance; }
 .final h2 b { font-weight: 500; }
 .final .body { margin: 20px auto 0; }
+
+/* the real Offline tab, as in the app */
+.app-screen { padding: 0 12px 12px; }
+.a-head { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 22px 8px 0; }
+.a-title { font-size: 15px; letter-spacing: .22em; text-transform: uppercase; }
+.a-av { width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #c9b8ae, #6d5d57); border: 1.5px solid rgba(255,255,255,.85); }
+.a-card { width: 100%; margin-top: 46px; border-radius: 24px; padding: 18px 16px 20px; position: relative; text-align: center;
+  background: rgba(255,255,255,.1); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); }
+.a-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: linear-gradient(175deg, rgba(255,255,255,.75), rgba(200,180,230,.25) 45%, rgba(255,255,255,.35));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+.a-app { text-align: left; font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+.a-clock { margin-top: 30px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-weight: 300; font-size: 34px; letter-spacing: .02em; color: rgba(255,255,255,.62); font-variant-numeric: tabular-nums; }
+.a-off { margin-top: 6px; display: flex; justify-content: center; align-items: center; gap: 9px; font-size: 9px; letter-spacing: .7em; text-transform: uppercase; }
+.a-off img { width: 11px; }
+.a-apps { margin-top: 30px; display: flex; justify-content: center; gap: 14px; }
+.a-ic { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.14); }
+.a-ic svg { width: 22px; height: 22px; }
+.a-ic.ring { box-shadow: 0 0 0 1.5px transparent; background: linear-gradient(rgba(150,150,165,.55), rgba(150,150,165,.55)) padding-box,
+  linear-gradient(135deg, #8246dc, #de345c 55%, #ee6a40) border-box; border: 1.5px solid transparent; }
+.a-moon { margin-top: 34px; width: 74px; height: 74px; border-radius: 50%; display: grid; place-items: center;
+  background: linear-gradient(rgba(170,160,165,.35), rgba(170,160,165,.35)) padding-box, linear-gradient(135deg, #b06ae0, #de345c 55%, #ee6a40) border-box; border: 1.5px solid transparent; }
+.a-moon img { width: 64px; }
+/* v13: closer to the device screenshot */
+.a-card { margin-top: 56px; padding-bottom: 22px; }
+.a-clock { margin-top: 34px; font-size: 30px; color: rgba(255,255,255,.5); }
+.a-ic, .a-ic.ring { background: rgba(255,255,255,.16); }
+.a-ic.ring { border: 0; position: relative; }
+.a-moon { margin-top: 44px; background: rgba(255,255,255,.1); border: 0; position: relative; }
+.a-ic.ring::after, .a-moon::after { content: ""; position: absolute; inset: 0; border-radius: 50%; padding: 1.5px; pointer-events: none;
+  background: linear-gradient(135deg, #8246dc, #de345c 55%, #ee6a40);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+.a-moon img { width: 58px; opacity: .9; }
+
+/* v13: the real app screen */
+.app-screen.real { padding: 0; }
+.app-screen.real img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
