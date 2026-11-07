@@ -961,3 +961,29 @@ body { background: #2a3a6e; }
 }
 /* v37 (David): no glow on the moon — only the sweep animation */
 .glassmoon img { filter: none !important; }
+
+/* ---------- v38 (David 2026-11-07): mobile refinement — desktop untouched ---------- */
+@media (max-width: 700px) {
+  .nav-brand img.wordmark { height: 14px; }
+  .v-hero { padding-top: 64px; }
+  .v-hero h1 { font-size: 54px; line-height: 1; letter-spacing: -.04em; }
+  .v-hero .lead { font-size: 19px; line-height: 1.4; margin-top: 18px; }
+  .v-hero .body { font-size: 16px; line-height: 1.55; margin-top: 16px; }
+  .v-hero .badges { margin-top: 34px; }
+  /* reading text: a size smaller, tighter leading, less gap between paragraphs */
+  .body, .feature p, .center-sec p, .privacy p { font-size: 16px; line-height: 1.55; }
+  .feature .body + .body, .feature p + p { margin-top: 12px; }
+  .feature h2, .center-sec h2 { font-size: 38px; line-height: 1.04; }
+  .eyebrow { font-size: 13px; }
+  .statement p { font-size: 24px; }
+  /* league card: name on one line */
+  .lg-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 16px; }
+  .lg-head { gap: 12px; }
+  /* cards breathe a little less on a narrow screen */
+  .card.pad { padding: 22px 20px 24px; }
+  .center-sec .stats > div { padding: 22px 20px; }
+  /* tab bar: slimmer */
+  .tabbar a { padding: 6px 4px 5px; font-size: 11px; }
+  .tabbar img, .tabbar svg { width: 18px; height: 18px; }
+}
+@media (max-width: 700px) { .feature .body, .center-sec .body, .faq-mini .body, .privacy .body { font-size: 16px; line-height: 1.55; } }
