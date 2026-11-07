@@ -576,3 +576,41 @@ details p { margin: 10px 0 0; color: var(--fg-2); }
 .glassmoon img { width: 80%; }
 .glassmoon.big { --s: 128px; }
 .privacy .glassmoon { display: grid; margin: 0 auto 22px; }
+
+/* v21: the app's pillar rings */
+.rings-art { display: grid; place-items: center; }
+.prs { position: relative; flex: none; }
+.pr { position: absolute; border-radius: 50%;
+  --ann: radial-gradient(farthest-side, transparent calc(100% - var(--w)), #000 calc(100% - var(--w) + .6px)); }
+.pr > i { position: absolute; inset: 0; border-radius: 50%; }
+.pr .trk { -webkit-mask: var(--ann); mask: var(--ann);
+  background: linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.02), rgba(255,255,255,.10)), color-mix(in srgb, var(--c0) 16%, transparent); }
+.pr.g .trk { background: linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.02), rgba(255,255,255,.10)), color-mix(in srgb, var(--c0) 12%, transparent);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.pr .arc { filter: drop-shadow(0 0 calc(var(--w) * .35) color-mix(in srgb, var(--c1) 35%, transparent)); }
+.pr:not(.g) .arc { filter: none; }
+.pr .arc::before, .pr .arc::after { content: ""; position: absolute; inset: 0; border-radius: 50%;
+  -webkit-mask: var(--ann), conic-gradient(#000 0 var(--p), transparent 0); -webkit-mask-composite: source-in;
+  mask: var(--ann), conic-gradient(#000 0 var(--p), transparent 0); mask-composite: intersect; }
+.pr .arc::before { background: conic-gradient(var(--c0), var(--c1), var(--c0)); }
+.pr .arc::after { background: linear-gradient(rgba(255,255,255,.38), rgba(255,255,255,0), rgba(255,255,255,.12)); mix-blend-mode: plus-lighter; }
+.pr .arc[data-empty] { display: none; }
+.pr .cap { position: absolute; left: 50%; top: 0; width: var(--w); height: var(--w); margin-left: calc(var(--w) / -2); border-radius: 50%;
+  transform-origin: 50% calc(var(--d) / 2); box-shadow: inset 0 calc(var(--w) * .18) calc(var(--w) * .25) rgba(255,255,255,.3); }
+.pr.g .rim { border: .7px solid rgba(255,255,255,.5); box-shadow: 0 0 calc(var(--w) * .3) rgba(255,255,255,.35), inset 0 0 calc(var(--w) * .3) rgba(255,255,255,.18); }
+.pr.g .rim::after { content: ""; position: absolute; inset: calc(var(--w) - 1.3px); border-radius: 50%; border: .8px solid rgba(0,0,0,.25); filter: blur(.6px); }
+.pr-moon { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.prs.dim { opacity: .35; }
+.rings { grid-template-columns: 200px 1fr; }
+.week { gap: 6px; }
+.week > div { position: relative; padding-top: 6px; }
+.week > div.today::before { content: ""; position: absolute; left: 50%; top: 0; width: 46px; height: 46px; transform: translateX(-50%); border-radius: 50%;
+  background: rgba(255,255,255,.14); box-shadow: inset 0 1px 1px rgba(255,255,255,.5); }
+.week > div > .prs { position: relative; }
+@media (max-width: 480px) { .rings-art .prs { transform: scale(.9); } }
+.pr .cap { box-shadow: none; }
+.week > div.today::before { top: 1px; width: 44px; height: 44px; }
+@media (max-width: 520px) { .rings { grid-template-columns: 1fr; justify-items: center; } .ring-list { width: 100%; } }
+.rings { grid-template-columns: 176px 1fr; gap: 26px; }
+.ring-list .v { font-size: 22px; }
+@media (max-width: 520px) { .rings { grid-template-columns: 1fr; } }
