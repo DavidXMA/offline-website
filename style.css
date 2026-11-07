@@ -1041,3 +1041,8 @@ body { background: #2a3a6e; }
   .center-sec .eyebrow { margin-left: auto; margin-right: auto; }
   .feature h2, .center-sec h2 { margin-top: 24px; line-height: 1.12; }
 }
+/* v43 (David): mobile — more air under the section labels; the run card's app name exactly as in the app (12 pt semibold, tracking 2) */
+@media (max-width: 700px) {
+  .feature h2, .center-sec h2 { margin-top: 34px; line-height: 1.15; }
+}
+@media (max-width: 700px) { .run-card .lab { font-size: 12px; font-weight: 600; letter-spacing: 2px; color: #fff; } }
