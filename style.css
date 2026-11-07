@@ -877,3 +877,8 @@ h1, h2, .lead { text-shadow: 0 1px 18px rgba(40,25,20,.18); }
 .v-hero { padding-bottom: clamp(60px, 8vw, 110px); }
 .nav-brand img { width: 1.3em; height: 1.3em; margin-right: .38em; filter: brightness(1.8) contrast(1.1) drop-shadow(0 0 6px rgba(255,255,255,.55)); }
 .badge img { filter: brightness(1.7) drop-shadow(0 0 5px rgba(255,255,255,.4)); }
+/* v30: the app's own wordmark (offline_wordmark.pdf → img/wordmark.svg) */
+.nav-brand img.wordmark { width: auto; height: 13px; margin: 0; filter: drop-shadow(0 0 10px rgba(255,255,255,.25)); }
+@media (max-width: 600px) { .nav-brand img.wordmark { height: 11px; } }
+.nav-brand img.wordmark { height: 15px; }
+@media (max-width: 600px) { .nav-brand img.wordmark { height: 13px; } }
