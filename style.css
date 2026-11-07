@@ -1018,3 +1018,10 @@ body { background: #2a3a6e; }
   .center-sec .stats > div { grid-template-columns: 130px 1fr; }
   .center-sec .stats b { font-size: 24px; }
 }
+/* v40 (David): the stats card on mobile — smaller */
+@media (max-width: 700px) {
+  .center-sec .stats { margin-top: 28px; padding: 2px 16px; border-radius: 20px; max-width: 340px; margin-left: auto; margin-right: auto; }
+  .center-sec .stats > div { grid-template-columns: 96px 1fr; column-gap: 10px; padding: 11px 0 !important; }
+  .center-sec .stats b { font-size: 19px; font-weight: 300; }
+  .center-sec .stats p { font-size: 12px; line-height: 1.35; }
+}
