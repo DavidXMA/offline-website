@@ -833,3 +833,25 @@ details p { margin: 10px 0 0; color: var(--fg-2); }
 .faq-one .faq-list details { width: 100%; box-sizing: border-box; }
 .faq-one .faq-list { width: min(680px, 100%) !important; max-width: none; justify-self: center; margin-left: auto; margin-right: auto; }
 .faq-one { width: 100%; box-sizing: border-box; }
+
+/* ---------- v28 (David 2026-11-07): brighter sky; every surface the same elevated glass ---------- */
+:root {
+  --card: rgba(255, 255, 255, 0.15);
+  --glass: blur(22px) saturate(175%);
+  --lift: inset 0 1px 0 rgba(255,255,255,.38), 0 32px 64px -30px rgba(45,28,22,.40), 0 10px 24px -14px rgba(45,28,22,.28);
+}
+body { background: #8a7d78; }
+.sky { background:
+    linear-gradient(180deg, rgba(40,38,48,.16) 0%, rgba(255,236,220,.04) 38%, rgba(220,150,85,.22) 85%, rgba(205,140,85,.32) 100%),
+    url("img/sky_day.jpg") center 40% / cover no-repeat, #8a7d78; }
+/* big surfaces */
+.card, .center-sec .stats > div, .faq-one .faq-list details {
+  background: var(--card); -webkit-backdrop-filter: var(--glass); backdrop-filter: var(--glass); box-shadow: var(--lift); }
+.faq-one .faq-list details:hover, .faq-one .faq-list details[open] { background: rgba(255,255,255,.19); }
+.scrolled .nav-pill, .tabbar { background: rgba(255,255,255,.14); -webkit-backdrop-filter: var(--glass); backdrop-filter: var(--glass); box-shadow: var(--lift); }
+/* small surfaces: chips, pills, badges */
+.badge.ghost, .chip-tag, .goalpill, .lang, .seg span:not(.on), .copy code {
+  background: rgba(255,255,255,.14); -webkit-backdrop-filter: blur(14px) saturate(170%); backdrop-filter: blur(14px) saturate(170%);
+  border-color: rgba(255,255,255,.38); box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 8px 18px -12px rgba(45,28,22,.35); }
+/* text stays readable on the brighter sky */
+h1, h2, .lead { text-shadow: 0 1px 18px rgba(40,25,20,.18); }
