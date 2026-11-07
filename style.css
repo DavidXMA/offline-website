@@ -907,3 +907,8 @@ h1, h2, .lead { text-shadow: 0 1px 18px rgba(40,25,20,.18); }
 /* v32: much less blur (David: "way too blurred") */
 :root { --lg-blur: blur(6px) saturate(150%); }
 .scrolled .nav-pill, .tabbar { -webkit-backdrop-filter: blur(10px) saturate(160%); backdrop-filter: blur(10px) saturate(160%); }
+/* v33: no colour boost in the glass — saturate() turned cards over the blue sky into blue slabs */
+:root { --lg-blur: blur(6px); }
+.scrolled .nav-pill, .tabbar { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.run-card .run-clock { color: rgba(255,255,255,.92); }
+.run-off img.wordmark { width: auto; height: 10px; margin: 0 auto; opacity: .85; }
