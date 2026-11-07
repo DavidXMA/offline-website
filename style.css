@@ -904,3 +904,6 @@ h1, h2, .lead { text-shadow: 0 1px 18px rgba(40,25,20,.18); }
 .live-chip { background: var(--lg-fill) !important; -webkit-backdrop-filter: var(--lg-blur); backdrop-filter: var(--lg-blur); box-shadow: var(--lg-edge), var(--lg-lift); border-color: transparent; }
 /* nav + tab bar float over text: same clear fill, a stronger blur so words behind don't show through */
 .scrolled .nav-pill, .tabbar { -webkit-backdrop-filter: blur(34px) saturate(180%); backdrop-filter: blur(34px) saturate(180%); }
+/* v32: much less blur (David: "way too blurred") */
+:root { --lg-blur: blur(6px) saturate(150%); }
+.scrolled .nav-pill, .tabbar { -webkit-backdrop-filter: blur(10px) saturate(160%); backdrop-filter: blur(10px) saturate(160%); }
