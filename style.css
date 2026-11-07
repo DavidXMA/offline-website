@@ -661,3 +661,5 @@ details p { margin: 10px 0 0; color: var(--fg-2); }
 
 .bar .ticks { -webkit-mask: none; mask: none; background: none; display: flex; gap: 3px; }
 .bar .ticks b { flex: 1; border-radius: 1px; background: rgba(255,255,255,.2); }
+.lg .bar { overflow: visible; border-radius: 0; background: none; margin-top: 0; height: 22px; }
+.lg .bar .em { top: 25px; font-size: 16px; z-index: 2; }
