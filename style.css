@@ -912,3 +912,13 @@ h1, h2, .lead { text-shadow: 0 1px 18px rgba(40,25,20,.18); }
 .scrolled .nav-pill, .tabbar { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
 .run-card .run-clock { color: rgba(255,255,255,.92); }
 .run-off img.wordmark { width: auto; height: 10px; margin: 0 auto; opacity: .85; }
+
+/* ---------- v34 (David 2026-11-07): his dusk sky as the background ---------- */
+body { background: #2a3a6e; }
+.sky { background:
+    linear-gradient(180deg, rgba(20,24,50,.10) 0%, rgba(0,0,0,0) 40%),
+    url("img/sky_dusk.jpg") 70% 50% / cover no-repeat, #2a3a6e; }
+@media (max-aspect-ratio: 3/4) {
+  .sky { background:
+    linear-gradient(180deg, rgba(20,24,50,.10) 0%, rgba(0,0,0,0) 40%),
+    url("img/sky_dusk_m.jpg") center / cover no-repeat, #2a3a6e; } }
