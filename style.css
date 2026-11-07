@@ -829,3 +829,7 @@ details p { margin: 10px 0 0; color: var(--fg-2); }
 .faq-one .faq-list summary::after { width: 26px; height: 26px; background-color: rgba(255,255,255,.1); box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); background-size: 12px; }
 .faq-one .faq-list details[open] summary::after { background-color: rgba(255,255,255,.18); }
 .faq-one .faq-list details p, .faq-one .faq-list details[open] p { animation: none !important; }
+.faq-one .faq-list { width: 100%; grid-template-columns: minmax(0, 1fr); }
+.faq-one .faq-list details { width: 100%; box-sizing: border-box; }
+.faq-one .faq-list { width: min(680px, 100%) !important; max-width: none; justify-self: center; margin-left: auto; margin-right: auto; }
+.faq-one { width: 100%; box-sizing: border-box; }
