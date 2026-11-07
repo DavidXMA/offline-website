@@ -1035,3 +1035,9 @@ body { background: #2a3a6e; }
   .seg:has(> span:nth-child(4)) { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .seg:has(> span:nth-child(4)) span { text-align: center; }
 }
+/* v42 (David): mobile — the "01 Take control" label was crowding the heading */
+@media (max-width: 700px) {
+  .feature .eyebrow, .center-sec .eyebrow { display: flex; width: max-content; margin-bottom: 0; }
+  .center-sec .eyebrow { margin-left: auto; margin-right: auto; }
+  .feature h2, .center-sec h2 { margin-top: 24px; line-height: 1.12; }
+}
