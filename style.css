@@ -987,3 +987,34 @@ body { background: #2a3a6e; }
   .tabbar img, .tabbar svg { width: 18px; height: 18px; }
 }
 @media (max-width: 700px) { .feature .body, .center-sec .body, .faq-mini .body, .privacy .body { font-size: 16px; line-height: 1.55; } }
+
+/* ---------- v39 (David 2026-11-07): mobile — stats, final moon, footer ---------- */
+@media (max-width: 700px) {
+  /* stats: one glass card, three tidy rows (number | line) */
+  .center-sec .stats { grid-template-columns: 1fr; gap: 0; margin-top: 40px; padding: 4px 20px; border-radius: 24px; position: relative;
+    background: var(--lg-fill); -webkit-backdrop-filter: var(--lg-blur); backdrop-filter: var(--lg-blur); box-shadow: var(--lg-edge), var(--lg-lift); }
+  .center-sec .stats > div { display: grid; grid-template-columns: 112px 1fr; align-items: center; column-gap: 14px;
+    padding: 18px 0 !important; border-radius: 0; background: none !important; box-shadow: none !important;
+    -webkit-backdrop-filter: none !important; backdrop-filter: none !important; text-align: left; }
+  .center-sec .stats > div::before { content: none; }
+  .center-sec .stats > div + div { border-top: 1px solid rgba(255,255,255,.16) !important; }
+  .center-sec .stats b { font-size: 26px; font-weight: 300; white-space: nowrap; }
+  .center-sec .stats p { margin: 0; font-size: 13.5px; line-height: 1.4; }
+
+  /* final: smaller moon */
+  .final .halo { width: 150px; height: 150px; }
+  .final .glassmoon.big { --s: 92px; }
+  .final { padding-block: 56px 40px; }
+
+  /* footer: centred like the rest, clear of the tab bar */
+  footer { padding-bottom: calc(118px + env(safe-area-inset-bottom, 0px)); }
+  footer .cols { flex-direction: column; align-items: center; text-align: center; gap: 14px; padding-top: 26px; margin-top: 8px; }
+  footer nav { justify-content: center; gap: 6px 18px; }
+  footer a { font-size: 13px; }
+  footer p { font-size: 11.5px; line-height: 1.6; }
+}
+@media (max-width: 700px) {
+  main { padding-bottom: 20px; }
+  .center-sec .stats > div { grid-template-columns: 130px 1fr; }
+  .center-sec .stats b { font-size: 24px; }
+}
