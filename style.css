@@ -663,3 +663,13 @@ details p { margin: 10px 0 0; color: var(--fg-2); }
 .bar .ticks b { flex: 1; border-radius: 1px; background: rgba(255,255,255,.2); }
 .lg .bar { overflow: visible; border-radius: 0; background: none; margin-top: 0; height: 22px; }
 .lg .bar .em { top: 25px; font-size: 16px; z-index: 2; }
+/* v23: half moon with the app's night glow, no glass behind */
+.glassmoon { background: none; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.glassmoon::before { content: none; }
+.glassmoon img { width: 100%; filter: drop-shadow(0 0 1.5px rgba(255,255,255,.75)) drop-shadow(0 0 6px rgba(255,255,255,.45)) drop-shadow(0 0 18px rgba(255,255,255,.28)); }
+.privacy .glassmoon { --s: 92px; }
+.final .glassmoon.big { --s: 150px; }
+@media (prefers-reduced-motion: no-preference) {
+  .privacy .glassmoon img, .final .glassmoon img { animation: moonglow 5s ease-in-out infinite; }
+  @keyframes moonglow { 50% { filter: drop-shadow(0 0 2px rgba(255,255,255,.85)) drop-shadow(0 0 9px rgba(255,255,255,.55)) drop-shadow(0 0 26px rgba(255,255,255,.35)); } }
+}
