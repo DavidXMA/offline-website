@@ -35,8 +35,14 @@
   </div>
   <p class="meta-line">Free. No ads. No tracking.</p>
 
-  <div class="shot" aria-hidden="true">
-    <div class="phone"><div class="app-screen real"><div class="real-frame"><img src="img/hero_app.jpg" alt="The Offline tab: Instagram locked, an offline run counting up"><span class="ov-time" data-now>9:41</span><span class="ov-clock" data-clock>04:18:27</span></div></div></div>
+  <div class="shot">
+    <div class="phone"><div class="app-screen real"><div class="real-frame"><img src="img/hero_app.jpg" alt="The Offline tab: Instagram locked, an offline run counting up"><span class="ov-time" data-now>9:41</span>
+        <span class="ov-app" id="ovApp">Instagram</span>
+        <span class="ov-clock" id="ovClock" aria-live="off">04:18:27</span>
+        <button type="button" class="ov-btn on" data-app="0" style="left:39.8%" aria-label="Show Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="1.5"><circle cx="11" cy="9.5" r="4.6"/><circle cx="9.2" cy="14.4" r="4.6" opacity=".55"/><circle cx="14.4" cy="14.4" r="4.6" opacity=".55"/></g></svg></button>
+        <button type="button" class="ov-btn" data-app="1" style="left:60.2%" aria-label="Show YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="3.2" fill="#fff"/><path d="M10.2 9.1l5 2.9-5 2.9z" fill="#8a8b92"/></svg></button>
+        <button type="button" class="ov-moon" id="ovMoon" aria-label="Moon"></button>
+        <span class="ov-glare" aria-hidden="true"></span></div></div></div>
   </div>
 </section>
 
@@ -223,6 +229,40 @@
   var chip = document.getElementById('livechip'), hero = document.querySelector('.v-hero');
   function chipVis() { if (chip && hero) chip.classList.toggle('away', hero.getBoundingClientRect().bottom > innerHeight * 0.4); }
   addEventListener('scroll', chipVis, { passive: true }); chipVis();
+  // The hero phone: two apps, each with its own run; tap to switch, the moon answers.
+  (function () {
+    var apps = [{ name: 'Instagram', base: 4 * 3600 + 18 * 60 + 27, ring: 'ig' }, { name: 'YouTube', base: 1 * 3600 + 52 * 60 + 9, ring: 'yt' }];
+    var cur = 0, auto = true, el = document.getElementById('ovClock'), lab = document.getElementById('ovApp');
+    var btns = document.querySelectorAll('.ov-btn'), frame = document.querySelector('.real-frame');
+    if (!el || !frame) return;
+    var last = '';
+    function render() {
+      var s = apps[cur].base + Math.floor((Date.now() - start) / 1000);
+      var t = pad(Math.floor(s / 3600)) + ':' + pad(Math.floor(s / 60) % 60) + ':' + pad(s % 60);
+      if (t === last) return;
+      el.innerHTML = t.split('').map(function (c, i) { return '<i' + (last && last[i] !== c ? ' class="roll"' : '') + '>' + c + '</i>'; }).join('');
+      last = t;
+    }
+    function pick(i, user) {
+      if (user) auto = false;
+      if (i === cur) return;
+      cur = i; last = '';
+      frame.classList.remove('swap'); void frame.offsetWidth; frame.classList.add('swap');
+      lab.textContent = apps[i].name;
+      btns.forEach(function (b, k) { b.classList.toggle('on', k === i); b.dataset.ring = apps[k].ring; });
+      render();
+    }
+    btns.forEach(function (b, k) { b.dataset.ring = apps[k].ring; b.addEventListener('click', function () { pick(k, true); }); });
+    render(); setInterval(render, 250);
+    if (!reduce) setInterval(function () { if (auto) pick(1 - cur, false); }, 6000);
+    var moon = document.getElementById('ovMoon');
+    moon.addEventListener('click', function () { moon.classList.remove('ping'); void moon.offsetWidth; moon.classList.add('ping'); auto = false; });
+    frame.addEventListener('pointermove', function (e) {
+      var r = frame.getBoundingClientRect();
+      frame.style.setProperty('--gx', ((e.clientX - r.left) / r.width * 100) + '%');
+      frame.style.setProperty('--gy', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
+  })();
   var map = { '#privacy': 'privacy.html', '#terms': 'terms.html', '#faq': 'support.html', '#contact': 'support.html' };
   if (map[location.hash]) location.replace(map[location.hash]);
 })();
