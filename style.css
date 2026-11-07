@@ -614,3 +614,50 @@ details p { margin: 10px 0 0; color: var(--fg-2); }
 .rings { grid-template-columns: 176px 1fr; gap: 26px; }
 .ring-list .v { font-size: 22px; }
 @media (max-width: 520px) { .rings { grid-template-columns: 1fr; } }
+
+/* v22: league cards as in the app (TickBarChart: 4/3 ticks, 22 bar, 32 photo) */
+.lg { padding: 18px 18px 24px; border-radius: 26px; }
+.lg-head { grid-template-columns: 52px 1fr auto 18px; gap: 14px; }
+.lg-icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(255,255,255,.12); box-shadow: none; }
+.lg-icon svg { width: 26px; height: 26px; }
+.lg-name { font-size: 19px; font-weight: 400; }
+.lg-type { font-size: 13px; color: rgba(255,255,255,.72); margin-top: 3px; }
+.lg-days b { font-size: 28px; font-weight: 200; }
+.lg-days span { font-size: 10px; letter-spacing: .14em; color: rgba(255,255,255,.6); }
+.chev { width: 16px; height: 16px; color: rgba(255,255,255,.7); }
+.chev.down { transform: rotate(180deg); }
+.lg-rows { margin-top: 18px; }
+.rows { --lead: 82px; position: relative; padding: 22px 6px 6px 0; }
+.row { display: grid; grid-template-columns: 28px 32px 1fr; gap: 11px; align-items: center; margin-bottom: 22px; }
+.row:last-child { margin-bottom: 4px; }
+.pts { display: grid; justify-items: center; gap: 2px; font-size: 10px; color: rgba(255,255,255,.6); }
+.pts i { width: 17px; height: 17px; }
+.pts i.medal { width: auto; height: auto; border: 0; font-style: normal; font-size: 16px; line-height: 1; }
+.pts i.ok { background: #fff; border: 0; }
+.pts i.ok::after { left: 6px; top: 3px; width: 3.5px; height: 7.5px; border-color: #3a3a44; border-width: 0 1.6px 1.6px 0; }
+.av { width: 32px; height: 32px; font-size: 10px; font-weight: 600; border: 1.6px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+.bar { position: relative; height: 22px; }
+.bar .ticks { position: absolute; inset: 0; height: 22px; display: block; gap: 0;
+  background: rgba(255,255,255,.2);
+  -webkit-mask: repeating-linear-gradient(90deg, #000 0 4px, transparent 4px 7px); mask: repeating-linear-gradient(90deg, #000 0 4px, transparent 4px 7px); }
+.bar .ticks .lit { position: absolute; left: 0; top: 0; bottom: 0; display: block; border-radius: 0;
+  background: linear-gradient(90deg, #f7a54a, #f0743c 25%, #e5423e 48%, #d8336c 70%, #b2378f 86%, #7b3ad0); }
+.bar .val { position: absolute; top: 2px; bottom: 2px; transform: translateX(-100%); display: grid; place-items: center; padding: 0 7px;
+  border-radius: 6px; font-size: 12px; font-weight: 600; letter-spacing: .01em; color: #fff; white-space: nowrap; font-variant-numeric: tabular-nums;
+  background: rgba(95, 25, 80, .55); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+.bar .em { position: absolute; top: 24px; transform: translate(-50%, -50%); font-size: 15px; line-height: 1; }
+.goal { position: absolute; top: 18px; bottom: 0; left: auto; right: 6px; border-left: 1.5px dotted rgba(255,255,255,.75); }
+.goal span { top: -18px; left: 0; transform: translateX(-50%); font-size: 11px; font-weight: 600; }
+
+/* v22b: run card = the app's card; league ticks ~30 per bar like on the phone */
+.run-card { padding: 26px 26px 30px; }
+.run-card .lab { color: #fff; font-weight: 600; letter-spacing: .22em; }
+.run-clock { margin-top: 46px; color: rgba(255,255,255,.6); }
+.run-off { margin-top: 12px; }
+.rc-note { margin: 44px 0 0; font-size: 13px; color: var(--fg-2); }
+.bar .ticks { -webkit-mask: repeating-linear-gradient(90deg, #000 0 1.95%, transparent 1.95% 3.333%); mask: repeating-linear-gradient(90deg, #000 0 1.95%, transparent 1.95% 3.333%); }
+.pts i.medal { font-size: 18px; }
+.bar .em { font-size: 16px; }
+
+.bar .ticks { -webkit-mask: none; mask: none; background: none; display: flex; gap: 3px; }
+.bar .ticks b { flex: 1; border-radius: 1px; background: rgba(255,255,255,.2); }
