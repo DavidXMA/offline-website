@@ -1025,3 +1025,13 @@ body { background: #2a3a6e; }
   .center-sec .stats b { font-size: 19px; font-weight: 300; }
   .center-sec .stats p { font-size: 12px; line-height: 1.35; }
 }
+/* v41 (David): mobile — the three facts as three separate small cards; the four league chips in an even 2×2 */
+@media (max-width: 700px) {
+  .center-sec .stats { background: none !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+    padding: 0; border-radius: 0; display: grid; gap: 8px; }
+  .center-sec .stats > div { padding: 12px 16px !important; border-radius: 16px; border-top: 0 !important;
+    background: var(--lg-fill) !important; -webkit-backdrop-filter: var(--lg-blur) !important; backdrop-filter: var(--lg-blur) !important;
+    box-shadow: var(--lg-edge), var(--lg-lift) !important; }
+  .seg:has(> span:nth-child(4)) { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .seg:has(> span:nth-child(4)) span { text-align: center; }
+}
