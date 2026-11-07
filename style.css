@@ -940,3 +940,24 @@ body { background: #2a3a6e; }
 .shield-phone .b span { display: block; text-align: center; padding: 14px 0; font-size: 16px; }
 .shield-phone .b .w { border-radius: 14px; background: #fff; color: #000; font-weight: 600; }
 .shield-phone .b .g { background: none; color: rgba(255,255,255,.85); font-weight: 400; padding: 10px 0 4px; }
+
+/* ---------- v36 (David 2026-11-07): mobile pass ---------- */
+@media (max-width: 700px) {
+  /* one floating bar only: the top bar scrolls away, the tab bar stays */
+  .nav-top { position: relative; top: 0; }
+  /* the tab bar floats over text: frosted enough that words behind don't fight its labels */
+  .tabbar { background: rgba(255,255,255,.10) !important; -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
+  /* calmer rhythm: less empty sky between sections */
+  .statement, .statement.idea { padding-block: 72px; }
+  .feature { padding-block: 44px; gap: 30px; }
+  .center-sec, .figure, .faq-one { padding-block: 64px; }
+  .final { padding-block: 72px 120px; }
+  .statement p { font-size: 25px; line-height: 1.22; }
+  /* league names wrap instead of "No phone befo…" */
+  .lg-name { white-space: normal; overflow: visible; font-size: 17px; line-height: 1.2; }
+  /* hero buttons: full, even width */
+  .v-hero .badges { gap: 10px; }
+  .v-hero .badge { flex: 1 1 0; justify-content: center; min-width: 0; padding-left: 14px; padding-right: 14px; }
+}
+/* v37 (David): no glow on the moon — only the sweep animation */
+.glassmoon img { filter: none !important; }
