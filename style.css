@@ -557,3 +557,22 @@ details p { margin: 10px 0 0; color: var(--fg-2); }
 .ringlight::after { inset: -6%; filter: blur(14px); opacity: .28; }
 .ringlight.big::after { inset: -4%; filter: blur(26px); opacity: .3; }
 .ringlight { background: rgba(255,255,255,.06); }
+
+/* v20: phone fits its screen; neutral glass moon; ring depth */
+.v-hero .shot .phone { aspect-ratio: auto; height: auto; }
+.app-screen.real { height: auto; display: block; }
+.real-frame { width: 100%; height: auto; aspect-ratio: 723 / 1568; container-type: inline-size; }
+.ov-time { font-size: 4.45cqw; }
+.ov-clock { font-size: 10.85cqw; }
+.live-chip { transition: opacity .35s ease, transform .35s ease; }
+.live-chip.away { opacity: 0; transform: translate(-50%, 16px); pointer-events: none; }
+.glassmoon { --s: 76px; position: relative; display: inline-grid; place-items: center; width: var(--s); height: var(--s); border-radius: 50%;
+  background: radial-gradient(circle at 35% 28%, rgba(255,255,255,.22), rgba(255,255,255,.05) 60%);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.55), inset 0 -8px 16px rgba(0,0,0,.18), 0 14px 30px -12px rgba(0,0,0,.45); }
+.glassmoon::before { content: ""; position: absolute; inset: 0; border-radius: 50%; padding: 1px;
+  background: linear-gradient(170deg, rgba(255,255,255,.85), rgba(255,255,255,.15) 45%, rgba(255,255,255,.45));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+.glassmoon img { width: 80%; }
+.glassmoon.big { --s: 128px; }
+.privacy .glassmoon { display: grid; margin: 0 auto 22px; }
