@@ -922,3 +922,21 @@ body { background: #2a3a6e; }
   .sky { background:
     linear-gradient(180deg, rgba(20,24,50,.10) 0%, rgba(0,0,0,0) 40%),
     url("img/sky_dusk_m.jpg") center / cover no-repeat, #2a3a6e; } }
+
+/* ---------- v35 (David 2026-11-07): the shield phone, closer to the real iOS shield ---------- */
+.shield-phone { width: min(270px, 72vw); aspect-ratio: 9 / 19.5; border-radius: 48px; padding: 7px;
+  background: linear-gradient(145deg, #6b6e76, #2a2c31 22%, #17181c 55%, #45474e 100%);
+  box-shadow: 0 60px 100px -45px rgba(10,8,30,.75), 0 18px 40px -20px rgba(10,8,30,.5), inset 0 0 0 1px rgba(255,255,255,.18), inset 0 0 0 3px #050506; }
+.shield-phone .screen { border-radius: 41px; padding: 0 22px 30px;
+  background: radial-gradient(120% 60% at 50% 0%, #1b2140 0%, #0c1022 55%, #0a0d1a 100%); }
+.shield-phone .island { width: 88px; height: 26px; margin-top: 10px; }
+.shield-phone .sbar { margin-top: -20px; padding: 0 10px; font-size: 13px; font-weight: 600; letter-spacing: -.01em; }
+.shield-phone .sb-ic { display: inline-flex; align-items: center; gap: 5px; }
+.shield-phone .sb-ic svg { height: 10px; width: auto; fill: currentColor; }
+.shield-phone .m { width: 46px; height: 46px; margin-top: 38%; }
+.shield-phone h4 { margin: 18px 0 6px; font-size: 19px; font-weight: 600; letter-spacing: -.01em; line-height: 1.2; }
+.shield-phone p { font-size: 14px; line-height: 1.35; color: rgba(255,255,255,.7); max-width: 15.5em; }
+.shield-phone .b { width: 100%; gap: 6px; justify-items: stretch; }
+.shield-phone .b span { display: block; text-align: center; padding: 14px 0; font-size: 16px; }
+.shield-phone .b .w { border-radius: 14px; background: #fff; color: #000; font-weight: 600; }
+.shield-phone .b .g { background: none; color: rgba(255,255,255,.85); font-weight: 400; padding: 10px 0 4px; }
