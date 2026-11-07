@@ -817,3 +817,7 @@ details p { margin: 10px 0 0; color: var(--fg-2); }
 .faq-one .faq-list details[open] summary::after { transform: rotate(45deg); background-color: rgba(255,255,255,.22); }
 .faq-one .faq-list details p { margin: 0; padding: 0 64px 20px 24px; font-size: 15px; line-height: 1.6; color: var(--fg-2); }
 @media (prefers-reduced-motion: no-preference) { .faq-one .faq-list details[open] p { animation: faqin .35s cubic-bezier(.2,.8,.2,1); } @keyframes faqin { from { opacity: 0; transform: translateY(-4px); } } }
+.faq-one .faq-list details p { animation: none !important; }
+.faq-one .faq-list details[open] p { animation: faqfade .4s ease both !important; }
+@keyframes faqfade { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .faq-one .faq-list details[open] p { animation: none !important; } }
