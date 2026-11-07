@@ -821,3 +821,11 @@ details p { margin: 10px 0 0; color: var(--fg-2); }
 .faq-one .faq-list details[open] p { animation: faqfade .4s ease both !important; }
 @keyframes faqfade { from { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .faq-one .faq-list details[open] p { animation: none !important; } }
+/* v30: FAQ rows match the site's cards */
+.faq-one .faq-list details { background: var(--card); -webkit-backdrop-filter: blur(6px) saturate(140%); backdrop-filter: blur(6px) saturate(140%); border-radius: 22px; box-shadow: 0 24px 50px -34px rgba(30,20,20,.45); }
+.faq-one .faq-list details::before { background: linear-gradient(175deg, rgba(255,255,255,.7), rgba(255,255,255,.2) 30%, rgba(255,255,255,.08) 70%, rgba(255,255,255,.3)); }
+.faq-one .faq-list details:hover, .faq-one .faq-list details[open] { background: var(--card); }
+.faq-one .faq-list summary { font-size: 16px; font-weight: 400; padding: 17px 18px 17px 24px; }
+.faq-one .faq-list summary::after { width: 26px; height: 26px; background-color: rgba(255,255,255,.1); box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); background-size: 12px; }
+.faq-one .faq-list details[open] summary::after { background-color: rgba(255,255,255,.18); }
+.faq-one .faq-list details p, .faq-one .faq-list details[open] p { animation: none !important; }
