@@ -1080,9 +1080,18 @@ body { background: #2a3a6e; }
 .pr.g .arc { filter: drop-shadow(0 calc(var(--w) * .22) calc(var(--w) * .35) rgba(10,0,30,.45)) drop-shadow(0 0 calc(var(--w) * .6) color-mix(in srgb, var(--c1) 50%, transparent)); }
 .pr .arc::before { background:
   radial-gradient(farthest-side, rgba(0,0,0,.20) calc(100% - var(--w)), rgba(0,0,0,0) calc(100% - var(--w) * .62), rgba(255,255,255,0) calc(100% - var(--w) * .38), rgba(255,255,255,.24) calc(100% - 1.5px)),
-  conic-gradient(var(--c0), var(--c1), var(--c0)); opacity: .8; }   /* 20 % see-through, like the app */
+  conic-gradient(var(--c0), var(--c1), var(--c0)); opacity: .2; }   /* 80 % see-through, like the app (2026-11-09) */
 .pr .arc::after { background: linear-gradient(rgba(255,255,255,.20), rgba(255,255,255,0), rgba(255,255,255,.08)); }
 .ringlight::before { background: conic-gradient(from 200deg, #6a3df5, #c81ed0, #ff1f6e, #ff6a3d, #ff2d55, #d41bb0, #6a3df5); }
 .ringlight::after { background: conic-gradient(from 200deg, #6a3df5, #ff1f6e, #ff6a3d, #ff2d55, #6a3df5); }
 /* v23: the week's small rings get the new look too (glow + darker shadow) */
 .pr:not(.g) .arc { filter: drop-shadow(0 calc(var(--w) * .22) calc(var(--w) * .35) rgba(10,0,30,.45)) drop-shadow(0 0 calc(var(--w) * .6) color-mix(in srgb, var(--c1) 50%, transparent)); }
+/* rings-80: like the app at 80 % see-through (2026-11-09): a separate soft glow carries the colour, bright rims */
+.pr .glow { opacity: .45; filter: blur(calc(var(--w) * .65)); }
+.pr .glow::before { content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(var(--c0), var(--c1), var(--c0));
+  -webkit-mask: var(--ann), conic-gradient(#000 0 var(--p), transparent 0); -webkit-mask-composite: source-in;
+  mask: var(--ann), conic-gradient(#000 0 var(--p), transparent 0); mask-composite: intersect; }
+.pr .glow[data-empty] { display: none; }
+.pr.g .arc, .pr:not(.g) .arc { filter: drop-shadow(0 calc(var(--w) * .22) calc(var(--w) * .35) rgba(10,0,30,.30)); }
+.pr .rim { border: .8px solid rgba(255,255,255,.6); box-shadow: 0 0 calc(var(--w) * .3) rgba(255,255,255,.4); }
