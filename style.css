@@ -1058,3 +1058,8 @@ body { background: #2a3a6e; }
 .idea [data-reveal] + [data-reveal] { margin-top: 1.1em !important; }
 /* v46: the Offline wordmark inside the closing line */
 .idea .wm-inline { display: inline-block; height: .64em; width: auto; vertical-align: 0; margin-right: .12em; }
+/* v47: wordmark on its own line above "is about…" */
+.idea .wm-inline { display: block; height: .8em; margin: 0 auto .7em; }
+/* v48: more air around the closing block */
+.idea p.strong { margin-top: clamp(56px, 7vw, 96px); }
+.idea .wm-inline { margin-bottom: 1.15em; }
