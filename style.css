@@ -1065,3 +1065,8 @@ body { background: #2a3a6e; }
 .idea .wm-inline { margin-bottom: 1.15em; }
 /* v49: the sweep runs exactly on the moon's outer outline (outline sits at 99% of the image radius) */
 .sweep { inset: .5%; }
+/* v50: desktop — the three fact cards centred (mobile keeps its row layout) */
+@media (min-width: 701px) {
+  .center-sec .stats > div { text-align: center; }
+  .center-sec .stats p { margin-left: auto; margin-right: auto; }
+}
