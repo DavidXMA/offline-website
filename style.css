@@ -1070,3 +1070,8 @@ body { background: #2a3a6e; }
   .center-sec .stats > div { text-align: center; }
   .center-sec .stats p { margin-left: auto; margin-right: auto; }
 }
+/* v51: the soft glow of the sweep was a 6 px band inside the outline — centre it on the outline */
+.sweep.soft { inset: calc(.5% - 3px); }
+/* v52: sweep line centred on the outline itself (was a hair inside) */
+.sweep { inset: -.4px; }
+.sweep.soft { inset: -3.4px; }
