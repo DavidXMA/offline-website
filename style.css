@@ -1063,3 +1063,5 @@ body { background: #2a3a6e; }
 /* v48: more air around the closing block */
 .idea p.strong { margin-top: clamp(56px, 7vw, 96px); }
 .idea .wm-inline { margin-bottom: 1.15em; }
+/* v49: the sweep runs exactly on the moon's outer outline (outline sits at 99% of the image radius) */
+.sweep { inset: .5%; }
