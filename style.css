@@ -1056,3 +1056,5 @@ body { background: #2a3a6e; }
 .idea [data-reveal] + .body { margin-top: 34px; }
 /* v45: all four idea lines in the big scroll-fill style */
 .idea [data-reveal] + [data-reveal] { margin-top: 1.1em !important; }
+/* v46: the Offline wordmark inside the closing line */
+.idea .wm-inline { display: inline-block; height: .64em; width: auto; vertical-align: 0; margin-right: .12em; }
