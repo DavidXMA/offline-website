@@ -1,3 +1,9 @@
+/* Jost, self-hosted (SIL OFL, img/fonts/Jost-OFL.txt) — audit #14 */
+@font-face{font-family:"Jost";font-style:normal;font-weight:200;font-display:swap;src:url("img/fonts/jost-latin-200-normal.woff2") format("woff2");}
+@font-face{font-family:"Jost";font-style:normal;font-weight:300;font-display:swap;src:url("img/fonts/jost-latin-300-normal.woff2") format("woff2");}
+@font-face{font-family:"Jost";font-style:normal;font-weight:400;font-display:swap;src:url("img/fonts/jost-latin-400-normal.woff2") format("woff2");}
+@font-face{font-family:"Jost";font-style:normal;font-weight:500;font-display:swap;src:url("img/fonts/jost-latin-500-normal.woff2") format("woff2");}
+@font-face{font-family:"Jost";font-style:normal;font-weight:600;font-display:swap;src:url("img/fonts/jost-latin-600-normal.woff2") format("woff2");}
 /* Offline — site styles, built from the app's own parts.
    Layout: one dusk sky behind everything (fixed, like the app's background);
    every block is an app card: clear glass, a bright rim, a tracked uppercase
