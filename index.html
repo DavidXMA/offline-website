@@ -40,9 +40,9 @@
   <span class="eyebrow">The idea</span>
   <h2>When did we stop looking up?</h2>
   <p data-reveal>Watching clouds go by. Waiting for the bus. Getting lost in your own thoughts.</p>
-  <p class="body">We used to have moments with nothing to fill them. Time to think, imagine, or simply look around.</p>
-  <p class="body">Now, every spare minute is filled with something to watch, read, or scroll through. Someone else's thoughts, someone else's life.</p>
-  <p class="body">And while we're busy watching, our own time keeps passing.</p>
+  <p data-reveal>We used to have moments with nothing to fill them. Time to think, imagine, or simply look around.</p>
+  <p data-reveal>Now, every spare minute is filled with something to watch, read, or scroll through. Someone else's thoughts, someone else's life.</p>
+  <p data-reveal>And while we're busy watching, our own time keeps passing.</p>
   <p class="strong">Offline is about taking those moments back. Making room for your own thoughts, your own ideas, and the life happening right in front of you.</p>
 </section>
 
@@ -192,9 +192,9 @@
   }, 1000);
 
   // The statement lights up word by word as it scrolls through the screen.
-  var p = document.querySelector('[data-reveal]');
+  // Every [data-reveal] paragraph lights up on its own, as it passes through the screen.
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (p && !reduce) {
+  if (!reduce) document.querySelectorAll('[data-reveal]').forEach(function (p) {
     var words = p.textContent.trim().split(/\s+/);
     p.innerHTML = words.map(function (w) { return '<span class="w">' + w + '</span>'; }).join(' ');
     var spans = p.querySelectorAll('.w');
@@ -205,7 +205,7 @@
       spans.forEach(function (s, i) { s.style.setProperty('--o', i < lit ? 1 : 0.22); });
     }
     addEventListener('scroll', update, { passive: true }); addEventListener('resize', update); update();
-  }
+  });
 
   document.querySelectorAll('.glow, .lg').forEach(function (el) {
     el.classList.add('glow');
