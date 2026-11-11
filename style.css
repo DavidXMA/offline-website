@@ -1104,3 +1104,8 @@ body { background: #2a3a6e; }
   user-select: all; -webkit-user-select: all; }
 .join-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .join-btns .btn { border: 0; font-family: inherit; cursor: pointer; }
+
+/* Break Time moon phase (2026-11-11) */
+.moonphase { display: block; }
+.moon-note { margin: 4px 0 0; font-size: 12px; color: var(--fg-3); line-height: 1.4; }
+.moonphase { overflow: visible; }
