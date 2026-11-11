@@ -1095,3 +1095,12 @@ body { background: #2a3a6e; }
 .pr .glow[data-empty] { display: none; }
 .pr.g .arc, .pr:not(.g) .arc { filter: drop-shadow(0 calc(var(--w) * .22) calc(var(--w) * .35) rgba(10,0,30,.30)); }
 .pr .rim { border: .8px solid rgba(255,255,255,.6); box-shadow: 0 0 calc(var(--w) * .3) rgba(255,255,255,.4); }
+
+/* ---------- join page (invite links from the app, 2026-11-11) ---------- */
+.join-card { padding: 34px 26px; text-align: center; }
+.join-title { font-weight: 300; font-size: 26px; letter-spacing: .02em; margin: 0; }
+.join-card .body { margin-left: auto; margin-right: auto; }
+.join-code { margin: 26px auto 24px; font-size: 44px; font-weight: 500; letter-spacing: .32em; padding-left: .32em;
+  user-select: all; -webkit-user-select: all; }
+.join-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.join-btns .btn { border: 0; font-family: inherit; cursor: pointer; }
