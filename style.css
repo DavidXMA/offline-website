@@ -1109,3 +1109,9 @@ body { background: #2a3a6e; }
 .moonphase { display: block; }
 .moon-note { margin: 4px 0 0; font-size: 12px; color: var(--fg-3); line-height: 1.4; }
 .moonphase { overflow: visible; }
+
+/* Today + week: faint rings like the app (strength .48), the moon in the middle (2026-11-11) */
+.prs.phase .pr { opacity: .48; }
+.mp-edge { animation: mpEdge 5.2s ease-in-out infinite; }
+@keyframes mpEdge { 0%, 100% { opacity: .2; } 50% { opacity: .85; } }
+@media (prefers-reduced-motion: reduce) { .mp-edge { animation: none; opacity: .6; } }
